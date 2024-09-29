@@ -1,0 +1,59 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.solar-system {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.sun {
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.earth-orbit{
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  height: 200px;
+  width: 200px;
+  border: 1px solid grey;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate 5s infinite linear;
+}
+.earth{
+  position: relative;
+  left: 7.5%;
+  top: 7.5%;
+  background-color: aliceblue;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg) translate(0,0) ;
+  }
+  to {
+    transform: rotate(360deg) translate(0 , 0) ;
+  }
+}

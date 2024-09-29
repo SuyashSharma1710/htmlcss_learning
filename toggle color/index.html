@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Toggle switch styling */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.switch:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .switch {
+  background-color: #2196F3;
+}
+
+input:checked + .switch:before {
+  transform: translateX(26px);
+}
+
+/* Content background styling */
+.color-block {
+  width: 100%;
+  height: 200px;
+  background-color: lightcoral; /* Default color */
+  transition: background-color 0.3s ease;
+}
+
+    </style>
+</head>
+<body>
+    <div class="toggle-switch">
+        <input type="checkbox" id="toggle" />
+        <label for="toggle" class="switch">darkmode</label>
+      </div>
+      
+      <div id="color-block" class="color-block">
+        <!-- Content goes here -->
+      </div>
+      
+    <script>
+        const toggleSwitch = document.getElementById("toggle");
+const colorBlock = document.getElementById("color-block");
+
+toggleSwitch.addEventListener("change", function () {
+  if (toggleSwitch.checked) {
+    colorBlock.style.backgroundColor = "lightblue"; // Color when toggled on
+  } else {
+    colorBlock.style.backgroundColor = "lightcoral"; // Color when toggled off
+  }
+});
+
+    </script>
+</body>
+</html>

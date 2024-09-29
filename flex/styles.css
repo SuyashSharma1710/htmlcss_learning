@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+  }
+  
+  .parallax {
+    /* The image used */
+    background-image: url('./banner2.jpg');
+  
+    /* Set a specific height */
+    height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    /* Initial background position */
+    background-position-y: 0;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  

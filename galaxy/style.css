@@ -1,0 +1,183 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  position: relative;
+  background-color: black;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  align-content: center;
+}
+
+
+.sun {
+  position: absolute;
+  left: -150px;
+  top: 25vh;
+  border-radius: 150px;
+  box-shadow: 0 0 100px orange, 0 0 5px yellow;
+  height: 300px;
+  width: 300px;
+  background-color: rgb(255, 166, 0);
+  background-image: radial-gradient(
+    circle,
+    rgb(255, 166, 0),
+    rgb(255, 255, 0),
+    orange
+  );
+}
+.neptune {
+  position: absolute;
+  left: 200px;
+  top: 40vh;
+  border-radius: 50px;
+  box-shadow: 0 0 100px orange, 0 0 5px yellow;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(255, 166, 0);
+  background-image: radial-gradient(
+    circle,
+    rgb(255, 166, 0),
+    rgb(255, 255, 0),
+    orange
+  );
+  animation: rotate 2s infinite linear;
+}
+.earth {
+  position: absolute;
+  left: 300px;
+  top: 40vh;
+  border-radius: 50px;
+  box-shadow: 0 0 100px orange, 0 0 5px yellow;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(255, 166, 0);
+  background-image: radial-gradient(
+    circle,
+    rgb(255, 166, 0),
+    rgb(255, 255, 0),
+    orange
+  );
+}
+.mars {
+  position: absolute;
+  left: 400px;
+  top: 40vh;
+  border-radius: 50px;
+  box-shadow: 0 0 100px orange, 0 0 5px yellow;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(255, 166, 0);
+  background-image: radial-gradient(
+    circle,
+    rgb(255, 166, 0),
+    rgb(255, 255, 0),
+    orange
+  );
+}
+.pluto {
+  position: absolute;
+  left: 500px;
+  top: 40vh;
+  border-radius: 50px;
+  box-shadow: 0 0 100px orange, 0 0 5px yellow;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(255, 166, 0);
+  background-image: radial-gradient(
+    circle,
+    rgb(255, 166, 0),
+    rgb(255, 255, 0),
+    orange
+  );
+}
+.mercury {
+  position: absolute;
+  left: 600px;
+  top: 40vh;
+  border-radius: 50px;
+  box-shadow: 0 0 100px orange, 0 0 5px yellow;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(255, 166, 0);
+  background-image: radial-gradient(
+    circle,
+    rgb(255, 166, 0),
+    rgb(255, 255, 0),
+    orange
+  );
+}
+.venus {
+  position: absolute;
+  left: 700px;
+  top: 40vh;
+  border-radius: 50px;
+  box-shadow: 0 0 100px orange, 0 0 5px yellow;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(255, 166, 0);
+  background-image: radial-gradient(
+    circle,
+    rgb(255, 166, 0),
+    rgb(255, 255, 0),
+    orange
+  );
+}
+.saturn {
+  position: absolute;
+  left: 800px;
+  top: 40vh;
+  border-radius: 50px;
+  box-shadow: 0 0 100px orange, 0 0 5px yellow;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(255, 166, 0);
+  background-image: radial-gradient(
+    circle,
+    rgb(255, 166, 0),
+    rgb(255, 255, 0),
+    orange
+  );
+}
+.jupiter {
+  position: absolute;
+  left: 900px;
+  top: 40vh;
+  border-radius: 50px;
+  box-shadow: 0 0 100px orange, 0 0 5px yellow;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(255, 166, 0);
+  background-image: radial-gradient(
+    circle,
+    rgb(255, 166, 0),
+    rgb(255, 255, 0),
+    orange
+  );
+}
+.uranus {
+  position: absolute;
+  left: 1000px;
+  top: 40vh;
+  border-radius: 50px;
+  box-shadow: 0 0 100px orange, 0 0 5px yellow;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(255, 166, 0);
+  background-image: radial-gradient(
+    circle,
+    rgb(255, 166, 0),
+    rgb(255, 255, 0),
+    orange
+  );
+}
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        align-content: center;
+        color: white;
+        
+      }
+      body{
+        display: flex;
+      }
+      .header {
+        padding: 20px;
+        /* background-color: green; */
+        grid-area: header;
+        background-color: #D9AFD9;
+background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+
+      }
+      .banner {
+        padding: 20px;
+        background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+
+        /* background-color: blue; */
+        grid-area: banner;
+      }
+      .l-aside {
+        padding: 20px;
+        background-color: #85FFBD;
+background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+
+
+        /* background-color: yellow; */
+        grid-area: l-aside;
+      }
+      .r-aside {
+        padding: 20px;
+        background-color: #8BC6EC;
+background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+
+
+        /* background-color: yellow; */
+        grid-area: r-aside;
+      }
+      .low-content {
+        padding: 20px;
+        background-color: #3EECAC;
+background-image: linear-gradient(19deg, #3EECAC 0%, #EE74E1 100%);
+
+        /* background-color: red; */
+        grid-area: low-content;
+      }
+      .footer {
+        background-color: #FFDEE9;
+background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+
+
+        /* background-color: orange;/ */
+        grid-area: footer;
+      }
+      .main {
+        padding: 20px;
+        grid-area: main;
+        /* background-color: purple; */
+        background-color: #FBDA61;
+background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+
+      }
+
+      .container {
+        width: 700px;
+        display: grid;
+        grid-template-rows: 80px auto 1fr auto 50px;
+        grid-template-columns: 1fr 4fr 1fr;
+        height: 100vh;
+        grid-template-areas:
+          "header       header      r-aside"
+          "l-aside      banner      r-aside"
+          "l-aside      main        r-aside"
+          "l-aside      low-content r-aside"
+          "l-aside      footer      r-aside";
+        grid-gap: 10px;
+        padding: 10px;
+        font-weight: 600;
+        font-size: 20px;
+      }
+
+      @media (max-width: 678px) {
+        .container {
+          grid-template-rows:
+            50px 50px 50px 4fr
+            50px 50px 50px;
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "header"
+            "banner"
+            "l-aside"
+            "main"
+            "r-aside"
+            "low-content"
+            "footer"
+            ;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">header</header>
+      <section class="banner">banner</section>
+      <aside class="l-aside">laside</aside>
+      <main class="main">main
+        <div>height:<span id="height"></span>  width:<span id="width"></span></div>
+      </main>
+      <aside class="r-aside">raside</aside>
+      <section class="low-content">lowcontent</section>
+      <footer class="footer">footer</footer>
+    </div>
+    <div class="container">
+      <header class="header">header</header>
+      <section class="banner">banner</section>
+      <aside class="l-aside">laside</aside>
+      <main class="main">main
+        <div>height:<span id="height"></span>  width:<span id="width"></span></div>
+      </main>
+      <aside class="r-aside">raside</aside>
+      <section class="low-content">lowcontent</section>
+      <footer class="footer">footer</footer>
+    </div>
+    <div class="container">
+      <header class="header">header</header>
+      <section class="banner">banner</section>
+      <aside class="l-aside">laside</aside>
+      <main class="main">main
+        <div>height:<span id="height"></span>  width:<span id="width"></span></div>
+      </main>
+      <aside class="r-aside">raside</aside>
+      <section class="low-content">lowcontent</section>
+      <footer class="footer">footer</footer>
+    </div>
+    <div class="container">
+      <header class="header">header</header>
+      <section class="banner">banner</section>
+      <aside class="l-aside">laside</aside>
+      <main class="main">main
+        <div>height:<span id="height"></span>  width:<span id="width"></span></div>
+      </main>
+      <aside class="r-aside">raside</aside>
+      <section class="low-content">lowcontent</section>
+      <footer class="footer">footer</footer>
+    </div>
+    <div class="container">
+      <header class="header">header</header>
+      <section class="banner">banner</section>
+      <aside class="l-aside">laside</aside>
+      <main class="main">main
+        <div>height:<span id="height"></span>  width:<span id="width"></span></div>
+      </main>
+      <aside class="r-aside">raside</aside>
+      <section class="low-content">lowcontent</section>
+      <footer class="footer">footer</footer>
+    </div>
+    <div class="container">
+      <header class="header">header</header>
+      <section class="banner">banner</section>
+      <aside class="l-aside">laside</aside>
+      <main class="main">main
+        <div>height:<span id="height"></span>  width:<span id="width"></span></div>
+      </main>
+      <aside class="r-aside">raside</aside>
+      <section class="low-content">lowcontent</section>
+      <footer class="footer">footer</footer>
+    </div>
+    <script>
+        function updateDimensions(){
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            document.getElementById('height').textContent= height;
+            document.getElementById('width').textContent= width;
+        }
+        window.addEventListener('resize',updateDimensions);
+        window.addEventListener('DOMContentLoaded', updateDimensions);
+    </script>
+  </body>
+</html>

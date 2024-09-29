@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    place-items: center;
+}
+section{
+    border: 1px solid greenyellow;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transform-style: preserve-3d ;
+    transform: perspective(2000px);
+}
+
+ .item{
+    border: 1px solid greenyellow;
+    overflow: hidden;
+    transition: 0.2s;
+    height: 100px;
+    display: flex;
+    place-items: center;
+    flex: 1;
+    filter: brightness(0);
+ 
+ 
+}
+
+
+img{
+    position: relative;
+    height:100%;
+}
+
+.item:hover{
+    filter: brightness(1);
+    transform: translateZ(200px);
+    box-shadow: 0 0 15px 2px greenyellow;
+}
+
+.item:hover+*{
+    filter: brightness(0.6);
+    transform: translateZ(150px) rotateY(30deg);
+    box-shadow: 0 0 10px 2px greenyellow;
+
+}
+.item:hover+*+*{
+    filter: brightness(0.4);
+    transform: translateZ(100px) rotateY(20deg); 
+    box-shadow: 0 0 5px 2px greenyellow;
+
+}
+.item:hover+*+*+*{
+    filter: brightness(0.2);
+
+}
+
+.item:has(+*:hover){
+    filter: brightness(0.6);
+    transform: translateZ(150px) rotateY(-40deg);
+    box-shadow: 0 0 10px 2px greenyellow;
+    
+}
+.item:has(+*+*:hover){
+    filter: brightness(0.4);
+    transform: translateZ(100px) rotateY(-30deg);
+    box-shadow: 0 0 5px 2px greenyellow;
+}
+.item:has(+*+*+*:hover){
+    filter: brightness(0.2);
+  
+}

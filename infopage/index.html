@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Suyash Sharma - Web Developer Portfolio">
+  <title>Suyash Sharma | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    nav {
+      margin: 1rem 0;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s ease; /* Hover transition */
+    }
+
+    nav a:hover {
+      color: #007bff;
+    }
+
+    section {
+      padding: 2rem;
+      background-color: #fff;
+      margin: 1rem auto;
+      max-width: 800px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    section h2 {
+      color: #007bff;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background-color: #333;
+      color: #fff;
+    }
+
+    .skills-list, .projects-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .skills-list li, .projects-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-info {
+      margin-top: 1rem;
+    }
+
+    .contact-info p {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Smooth transition when scrolling to sections */
+    .section-active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Suyash Sharma</h1>
+    <p>Web Developer | Competent in Frontend and Backend Technologies</p>
+  </header>
+
+  <nav>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="#misc">Miscellaneous</a>
+  </nav>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>HTML, CSS, JavaScript, React.js</li>
+      <li>Python, Django, Java, C</li>
+      <li>Tailwind CSS, Bootstrap</li>
+      <li>Version Control (Git, GitHub)</li>
+      <li>Adobe Photoshop, After Effects, Figma</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul class="projects-list">
+      <li><strong>LMS E-learning Platform:</strong> Built with Django.</li>
+      <li><strong>Portfolio Website:</strong> Developed using React.js and Three.js.</li>
+      <li><strong>Estate Site:</strong> Created using HTML, CSS, and JavaScript.</li>
+      <li><strong>Quiz Game:</strong> A fun project using HTML, CSS, and JavaScript.</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <p>Email: suyash@example.com</p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/suyashsharma" target="_blank">linkedin.com/in/suyashsharma</a></p>
+      <p>GitHub: <a href="https://github.com/SuyashSharma1710" target="_blank">github.com/SuyashSharma1710</a></p>
+    </div>
+  </section>
+
+  <section id="misc">
+    <h2>Miscellaneous</h2>
+    <p>Feel free to connect with me for any web development or collaboration opportunities. I'm always eager to learn new technologies and take on challenging projects!</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Suyash Sharma</p>
+  </footer>
+  <script>
+    // Add smooth scroll effect with fade-in
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        const sections = document.querySelectorAll('section');
+
+        // sections.forEach(section => {
+        //   section.classList.remove('section-active');
+        // });
+
+        // target.classList.add('section-active');
+
+        // Smooth scroll
+        window.scrollTo({
+          top: target.offsetTop,
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Add fade-in effect on page load
+    window.addEventListener('load', () => {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.add('section-active');
+      });
+    });
+  </script>
+</body>
+</html>
